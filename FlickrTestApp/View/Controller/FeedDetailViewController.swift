@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FeedDetailViewController: UIViewController {
     
@@ -19,5 +20,27 @@ class FeedDetailViewController: UIViewController {
         super.viewDidLoad()
         
         
+        
+        
+        photoDataSubscribe()
+    }
+    
+    func photoDataSubscribe() {
+        feedDetailViewModel.photo.subscribe(onNext: { [weak self] (photoData) in
+            
+            if let server = photoData.server,
+                let secret = photoData.secret,
+                let id = photoData.id,
+                let url = URL(string: "https://live.staticflickr.com/\(server)/\(id)_\(secret)_c.jpg") {
+                
+                print("https://live.staticflickr.com/\(server)/\(id)_\(secret)_c.jpg")
+                let resource = ImageResource(downloadURL: url, cacheKey: id)
+                self?.feedImageView.kf.setImage(with: resource)
+                
+                self?.imageTitleLabel.text = photoData.title
+                
+            }
+        })
+            .disposed(by: feedDetailViewModel.disposeBag)
     }
 }

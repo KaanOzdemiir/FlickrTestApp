@@ -62,7 +62,27 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="w2a-ui-bgY"/>
+                    <navigationItem key="navigationItem" id="ZOe-M0-Evw">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="sFi-E1-VH2">
+                            <rect key="frame" x="207" y="22" width="0.0" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flickr" translatesAutoresizingMaskIntoConstraints="NO" id="jkq-DJ-awt">
+                                    <rect key="frame" x="-50" y="-20" width="100" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="lFi-t3-teI"/>
+                                        <constraint firstAttribute="width" constant="100" id="yg9-px-hCs"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.89960104230000004" green="0.36209958790000002" blue="0.48627513649999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstItem="jkq-DJ-awt" firstAttribute="centerY" secondItem="sFi-E1-VH2" secondAttribute="centerY" id="QvX-Mr-FR0"/>
+                                <constraint firstItem="jkq-DJ-awt" firstAttribute="centerX" secondItem="sFi-E1-VH2" secondAttribute="centerX" id="nk1-yJ-ec8"/>
+                            </constraints>
+                        </view>
+                    </navigationItem>
                     <connections>
                         <outlet property="feedTableView" destination="a1F-i2-BfK" id="f9A-HG-9dc"/>
                         <outlet property="spinner" destination="zFU-nt-8ML" id="Pvk-Xx-RXq"/>
@@ -115,6 +135,30 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wP8-Gz-xlE"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0hl-RC-Sgv">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="JKP-N8-y0u">
+                            <rect key="frame" x="207" y="22" width="0.0" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8p7-ue-9gL">
+                                    <rect key="frame" x="-24" y="-10.5" width="48" height="21"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="8p7-ue-9gL" firstAttribute="centerY" secondItem="JKP-N8-y0u" secondAttribute="centerY" id="R0U-pw-OWA"/>
+                                <constraint firstItem="8p7-ue-9gL" firstAttribute="centerX" secondItem="JKP-N8-y0u" secondAttribute="centerX" id="iZd-iD-D24"/>
+                            </constraints>
+                        </view>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="feedImageView" destination="JWn-gm-bHg" id="wh1-H9-71a"/>
+                        <outlet property="imageTitleLabel" destination="v17-rM-m55" id="oxb-QW-zir"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jp-D2-S3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="j9m-bb-4aC">
@@ -143,4 +187,7 @@
             <point key="canvasLocation" x="134.78260869565219" y="-536.38392857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="flickr" width="32" height="32"/>
+    </resources>
 </document>
