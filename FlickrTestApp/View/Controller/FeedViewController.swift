@@ -31,6 +31,7 @@ class FeedViewController: UIViewController {
     func rxTableViewBind() {
         
         feedTableView.register(UINib(nibName: "FeedTableViewCell", bundle: nil), forCellReuseIdentifier: feedCellIdentifier)
+        feedTableView.prefetchDataSource = self
 
         
         // BINDING RECENTPHOTOS TO TABLEVIEW
@@ -52,4 +53,27 @@ class FeedViewController: UIViewController {
         spinner.stopAnimating()
     }
 
+}
+
+extension FeedViewController: UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        
+        print("PREFETCHING \(indexPaths)")
+        
+        
+        let needsFetch = indexPaths.contains{$0.row >= self.recentPhotoViewModel.recentPhotos.value.count - 1}
+        
+        if needsFetch {
+            guard !recentPhotoViewModel.isFetchingNextPage else {
+                return
+            }
+            recentPhotoViewModel.fetchRecentPhotos()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+        for indexPath in indexPaths {
+            print("CANCELED PREFETCHING --> \(indexPath.row)")
+        }
+    }
 }

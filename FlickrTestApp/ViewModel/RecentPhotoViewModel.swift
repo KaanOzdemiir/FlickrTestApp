@@ -19,8 +19,11 @@ class RecentPhotoViewModel {
         
     var serviceParams = RecentPhotoServiceParam()
     
+    var isFetchingNextPage = false
+    
     func fetchRecentPhotos() {
         
+        isFetchingNextPage = true
         if serviceParams.hasMore {
             requestGetRecentPhotos(serviceParams: serviceParams)
                 .subscribe(onNext: {[weak self] (photoResponse) in
@@ -31,6 +34,7 @@ class RecentPhotoViewModel {
                         self?.recentPhotos.accept((self?.recentPhotos.value ?? []) + photos)
                     }
                     
+                    self?.isFetchingNextPage = false
                     
                     self?.serviceParams.page += 1
                     if let total = photoResponse.photos?.total,  self!.serviceParams.page * self!.serviceParams.perPage < total {
