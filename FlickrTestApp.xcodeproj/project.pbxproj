@@ -14,6 +14,9 @@
 		F7F3940723008A0D00C5C24B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7F3940523008A0D00C5C24B /* LaunchScreen.storyboard */; };
 		F7F3941A23008CFC00C5C24B /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F3941823008CFC00C5C24B /* FeedTableViewCell.swift */; };
 		F7F3941B23008CFC00C5C24B /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7F3941923008CFC00C5C24B /* FeedTableViewCell.xib */; };
+		F7F3941F23008D7A00C5C24B /* PhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F3941E23008D7A00C5C24B /* PhotoResponse.swift */; };
+		F7F3942223008D8700C5C24B /* PhotosData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F3942023008D8700C5C24B /* PhotosData.swift */; };
+		F7F3942323008D8700C5C24B /* PhotoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F3942123008D8700C5C24B /* PhotoData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		F7F3940823008A0D00C5C24B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7F3941823008CFC00C5C24B /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		F7F3941923008CFC00C5C24B /* FeedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
+		F7F3941E23008D7A00C5C24B /* PhotoResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoResponse.swift; sourceTree = "<group>"; };
+		F7F3942023008D8700C5C24B /* PhotosData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosData.swift; sourceTree = "<group>"; };
+		F7F3942123008D8700C5C24B /* PhotoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +151,8 @@
 		F7F3941C23008D0D00C5C24B /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				F7F3942123008D8700C5C24B /* PhotoData.swift */,
+				F7F3942023008D8700C5C24B /* PhotosData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 		F7F3941D23008D1300C5C24B /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				F7F3941E23008D7A00C5C24B /* PhotoResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -272,7 +281,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7F3941F23008D7A00C5C24B /* PhotoResponse.swift in Sources */,
+				F7F3942323008D8700C5C24B /* PhotoData.swift in Sources */,
 				F7F393FD23008A0C00C5C24B /* AppDelegate.swift in Sources */,
+				F7F3942223008D8700C5C24B /* PhotosData.swift in Sources */,
 				F7F3941A23008CFC00C5C24B /* FeedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
