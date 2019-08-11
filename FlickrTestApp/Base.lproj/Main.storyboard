@@ -29,6 +29,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BKv-so-MYa" kind="show" identifier="segueFeedDetailVC" id="SOR-86-HpT"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -68,6 +71,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Feed Detail View Controller-->
+        <scene sceneID="HEu-wf-dwF">
+            <objects>
+                <viewController id="BKv-so-MYa" customClass="FeedDetailViewController" customModule="FlickrTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a5m-Vk-dRM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JWn-gm-bHg">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBx-yB-Xtz" userLabel="Transparent View">
+                                <rect key="frame" x="0.0" y="846" width="414" height="16"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v17-rM-m55" userLabel="Image Title Label">
+                                        <rect key="frame" x="0.0" y="8" width="394" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="v17-rM-m55" secondAttribute="trailing" constant="20" symbolic="YES" id="9bB-Qt-Abm"/>
+                                    <constraint firstAttribute="bottom" secondItem="v17-rM-m55" secondAttribute="bottom" constant="8" id="Agq-t4-Nxr"/>
+                                    <constraint firstItem="v17-rM-m55" firstAttribute="top" secondItem="CBx-yB-Xtz" secondAttribute="top" constant="8" id="RYb-sV-FdG"/>
+                                    <constraint firstItem="v17-rM-m55" firstAttribute="leading" secondItem="CBx-yB-Xtz" secondAttribute="leading" id="r94-hf-wCp"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="IdE-ml-VRW"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JWn-gm-bHg" firstAttribute="leading" secondItem="wP8-Gz-xlE" secondAttribute="leading" id="064-ah-Mdq"/>
+                            <constraint firstItem="CBx-yB-Xtz" firstAttribute="leading" secondItem="wP8-Gz-xlE" secondAttribute="leading" id="6VF-QO-1Uo"/>
+                            <constraint firstItem="wP8-Gz-xlE" firstAttribute="bottom" secondItem="CBx-yB-Xtz" secondAttribute="bottom" id="Aow-5I-2yY"/>
+                            <constraint firstItem="wP8-Gz-xlE" firstAttribute="bottom" secondItem="JWn-gm-bHg" secondAttribute="bottom" id="Oi2-Ee-FmU"/>
+                            <constraint firstItem="JWn-gm-bHg" firstAttribute="trailing" secondItem="wP8-Gz-xlE" secondAttribute="trailing" id="VAC-1u-4GQ"/>
+                            <constraint firstItem="CBx-yB-Xtz" firstAttribute="trailing" secondItem="wP8-Gz-xlE" secondAttribute="trailing" id="VEZ-dp-h9C"/>
+                            <constraint firstItem="JWn-gm-bHg" firstAttribute="top" secondItem="wP8-Gz-xlE" secondAttribute="top" id="ifD-LR-VY9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wP8-Gz-xlE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7jp-D2-S3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="j9m-bb-4aC">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+            </objects>
+            <point key="canvasLocation" x="2066" y="157"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cUx-hx-ds3">

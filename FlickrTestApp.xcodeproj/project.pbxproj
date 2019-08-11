@@ -26,6 +26,8 @@
 		F7F3943323008E2700C5C24B /* ServiceMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F3942F23008E2700C5C24B /* ServiceMethod.swift */; };
 		F7F3943723008E7C00C5C24B /* RecentPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F3943623008E7C00C5C24B /* RecentPhotoViewModel.swift */; };
 		F7F3943A23008EB600C5C24B /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F3943923008EB600C5C24B /* FeedViewController.swift */; };
+		F7F3943C2300929200C5C24B /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F3943B2300929200C5C24B /* FeedDetailViewController.swift */; };
+		F7F3943E230092BC00C5C24B /* FeedDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F3943D230092BC00C5C24B /* FeedDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		F7F3942F23008E2700C5C24B /* ServiceMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceMethod.swift; sourceTree = "<group>"; };
 		F7F3943623008E7C00C5C24B /* RecentPhotoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentPhotoViewModel.swift; sourceTree = "<group>"; };
 		F7F3943923008EB600C5C24B /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		F7F3943B2300929200C5C24B /* FeedDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
+		F7F3943D230092BC00C5C24B /* FeedDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				F7F3943623008E7C00C5C24B /* RecentPhotoViewModel.swift */,
+				F7F3943D230092BC00C5C24B /* FeedDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				F7F3943923008EB600C5C24B /* FeedViewController.swift */,
+				F7F3943B2300929200C5C24B /* FeedDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -336,8 +342,10 @@
 				F7F3942723008DD700C5C24B /* PhotoRepository.swift in Sources */,
 				F7F3941F23008D7A00C5C24B /* PhotoResponse.swift in Sources */,
 				F7F3942323008D8700C5C24B /* PhotoData.swift in Sources */,
+				F7F3943C2300929200C5C24B /* FeedDetailViewController.swift in Sources */,
 				F7F393FD23008A0C00C5C24B /* AppDelegate.swift in Sources */,
 				F7F3943223008E2700C5C24B /* FlickrError.swift in Sources */,
+				F7F3943E230092BC00C5C24B /* FeedDetailViewModel.swift in Sources */,
 				F7F3943A23008EB600C5C24B /* FeedViewController.swift in Sources */,
 				F7F3942223008D8700C5C24B /* PhotosData.swift in Sources */,
 				F7F3943123008E2700C5C24B /* Extension.swift in Sources */,

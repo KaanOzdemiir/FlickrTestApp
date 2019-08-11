@@ -26,6 +26,7 @@ class FeedViewController: UIViewController {
         
         rxTableViewBind()
         
+        rxTableViewModelSelected()
     }
     
     func rxTableViewBind() {
@@ -43,6 +44,26 @@ class FeedViewController: UIViewController {
                 cell.setWith(photoData: photoData)
             }
             .disposed(by: recentPhotoViewModel.disposeBag)
+    }
+    
+    func rxTableViewModelSelected() {
+        feedTableView
+            .rx
+            .modelSelected(PhotoData.self)
+            .subscribe(onNext: { (photoData) in
+            
+            
+                print("Selected Photo Name -->", photoData.title ?? "")
+            
+            self.performSegue(withIdentifier: "segueFeedDetailVC", sender: photoData)
+        })
+            .disposed(by: recentPhotoViewModel.disposeBag)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if "segueFeedDetailVC" == segue.identifier, let feedDetailVC = segue.destination as? FeedDetailViewController, let photoData = sender as? PhotoData {
+            feedDetailVC.feedDetailViewModel.photo.onNext(photoData)
+        }
     }
     
     func loading() {
