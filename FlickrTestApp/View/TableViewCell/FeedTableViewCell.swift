@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import Hero
 
 class FeedTableViewCell: UITableViewCell {
 
@@ -27,6 +28,7 @@ class FeedTableViewCell: UITableViewCell {
             let id = photoData.id,
             let url = URL(string: "https://live.staticflickr.com/\(server)/\(id)_\(secret)_c.jpg") {
             
+            photoImageView.heroID = id
             print("https://live.staticflickr.com/\(server)/\(id)_\(secret)_c.jpg")
             
             let processor = DownsamplingImageProcessor(size: photoImageView.frame.size)

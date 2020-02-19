@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pOp-Gv-O9O">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pOp-Gv-O9O">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,11 +24,11 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7m0-xL-0mm" id="xzC-ws-vof">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="BKv-so-MYa" kind="show" identifier="segueFeedDetailVC" id="SOR-86-HpT"/>
+                                            <segue destination="BKv-so-MYa" kind="presentation" identifier="segueFeedDetailVC" modalPresentationStyle="fullScreen" id="SOR-86-HpT"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -83,6 +81,9 @@
                             </constraints>
                         </view>
                     </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="feedTableView" destination="a1F-i2-BfK" id="f9A-HG-9dc"/>
                         <outlet property="spinner" destination="zFU-nt-8ML" id="Pvk-Xx-RXq"/>
@@ -90,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1010" y="-536"/>
         </scene>
         <!--Feed Detail View Controller-->
         <scene sceneID="HEu-wf-dwF">
@@ -101,7 +102,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JWn-gm-bHg">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="123"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBx-yB-Xtz" userLabel="Transparent View">
                                 <rect key="frame" x="0.0" y="846" width="414" height="16"/>
@@ -128,10 +133,10 @@
                             <constraint firstItem="JWn-gm-bHg" firstAttribute="leading" secondItem="wP8-Gz-xlE" secondAttribute="leading" id="064-ah-Mdq"/>
                             <constraint firstItem="CBx-yB-Xtz" firstAttribute="leading" secondItem="wP8-Gz-xlE" secondAttribute="leading" id="6VF-QO-1Uo"/>
                             <constraint firstItem="wP8-Gz-xlE" firstAttribute="bottom" secondItem="CBx-yB-Xtz" secondAttribute="bottom" id="Aow-5I-2yY"/>
-                            <constraint firstItem="wP8-Gz-xlE" firstAttribute="bottom" secondItem="JWn-gm-bHg" secondAttribute="bottom" id="Oi2-Ee-FmU"/>
+                            <constraint firstAttribute="bottom" secondItem="JWn-gm-bHg" secondAttribute="bottom" id="Oi2-Ee-FmU"/>
                             <constraint firstItem="JWn-gm-bHg" firstAttribute="trailing" secondItem="wP8-Gz-xlE" secondAttribute="trailing" id="VAC-1u-4GQ"/>
                             <constraint firstItem="CBx-yB-Xtz" firstAttribute="trailing" secondItem="wP8-Gz-xlE" secondAttribute="trailing" id="VEZ-dp-h9C"/>
-                            <constraint firstItem="JWn-gm-bHg" firstAttribute="top" secondItem="wP8-Gz-xlE" secondAttribute="top" id="ifD-LR-VY9"/>
+                            <constraint firstItem="JWn-gm-bHg" firstAttribute="top" secondItem="a5m-Vk-dRM" secondAttribute="top" id="ifD-LR-VY9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wP8-Gz-xlE"/>
                     </view>
@@ -155,6 +160,9 @@
                             </constraints>
                         </view>
                     </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="feedImageView" destination="JWn-gm-bHg" id="wh1-H9-71a"/>
                         <outlet property="imageTitleLabel" destination="v17-rM-m55" id="oxb-QW-zir"/>
@@ -166,7 +174,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </objects>
-            <point key="canvasLocation" x="2066" y="157"/>
+            <point key="canvasLocation" x="1912" y="-536"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cUx-hx-ds3">
@@ -178,6 +186,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5rF-G5-vXc"/>
                     </connections>
